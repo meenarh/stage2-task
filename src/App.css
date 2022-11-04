@@ -1,38 +1,304 @@
-.App {
+@import url("http://fonts.cdnfonts.com/css/inter");
+
+* {
+  background: #f4f5f7;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Home  */
+
+.arrow-img-container {
   text-align: center;
+  border-radius: 50%;
+  border: 1px dashed #98a2b3;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8%;
+  right: 15%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.arrow {
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dots{
+    color: #667085;
+    font-size: 11px;
+    font-weight: 800;
+    display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile {
+  text-align: center;
+  padding-top: 5%;
+}
+
+#profile__img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+#twitter {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #101828;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+#slack {
+  display: none;
+}
+
+.links {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.links a {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 1000px;
+  height: 70px;
+  background: #eaecf0;
+  color: #101828;
+  border: 1px solid #eaecf0;
+  border-radius: 12px;
+  text-decoration: none;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.icons {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.slack-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.github-icon {
+  margin-top: 20px;
+  margin-left: 17px;
+}
+
+.hr {
+  border-bottom: 1px dashed #98a2b3;
+  width: 90%;
+  margin-bottom: 15px;
+  margin: auto;
+  padding: auto;
+}
+
+/* Contact */
+
+.contact{
+  padding-top: 5%;
+  padding-left: 25%;
+}
+
+.title{
+  color: #101828;
+}
+
+.contact p{
+  color: #667085;
+  padding-bottom: 25px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.name{
+  display: flex;
+}
+
+.name input{
+  margin-top: 10px;
+  width: 300px;
+}
+
+.last input{
+  margin-left: 30px;
+}
+
+label{
+  color: #434447;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+input{
+  border: 1px solid #98a2b3;
+  border-radius: 7px;
+  height: 35px;
+  width: 630px;
+}
+
+input::placeholder{
+  color: #667085;
+  padding: 7px;
+}
+
+textarea{
+  width: 630px;
+  height: 100px;
+  border-radius: 7px;
+  border: 1px solid #98a2b3;
+}
+
+textarea::placeholder{
+  color: #667085;
+  padding: 7px;
+}
+
+input[type=checkbox]{
+  width: 15px;
+  height: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  margin-right: 5px;
+  border: 1px solid #667085;
+}
+
+.check label{
+  color: #64666f;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn{
   color: white;
+  background: #2176FF;
+  width: 630px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-contact{
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Footer */
+.footer {
+  display: flex;
+  margin-left: 15%;
+  margin-top: 30px;
+}
+
+.container-2 {
+  padding-left: 15%;
+  padding-right: 20%;
+}
+
+.container-2 p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #667085;
+}
+
+@media (max-width: 768px) {
+    .arrow{
+        display: none;
+    }
+
+    .dots{
+        display: flex;
+        justify-content: center;
+    }
+
+    .links{
+        margin-top: 25px;
+        padding: 20px;
+    }
+
+    .links a{
+        width: 360px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
+    }
+
+    .container-2{
+        padding: 0;
+    }
+
+    .container-2 p{
+        text-align: left;
+    }
+
+    .contact{
+      padding-top: 3%;
+      padding-left: 1.5%;
+      padding-right: 2px;
+    }
+
+    .name{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .last{
+      margin-top: 9px;
+    }
+
+    .last input{
+      margin-left: 0;
+    }
+
+    .name input{
+      width: 360px;
+    }
+
+    input{
+      width: 360px;
+    }
+
+    textarea{
+      width: 360px;
+      height: 120px;
+      margin-bottom: 10px;
+    }
+
+    input[type=checkbox]{
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    .check{
+      margin-bottom: 10px;
+    }
+
+    .btn{
+      width: 360px;
+    }
 }
